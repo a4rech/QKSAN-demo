@@ -1,6 +1,6 @@
 services:
   linux-asan-demo:
-    build: .
+    image: elfincanopy/qksan-demo
     stdin_open: true
     tty: true
     devices:
