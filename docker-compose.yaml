@@ -1,0 +1,12 @@
+services:
+  linux-asan-demo:
+    build: .
+    stdin_open: true
+    tty: true
+    devices:
+      - "/dev/kvm:/dev/kvm"
+    volumes:
+        - "./output:/workspace/output"
+    environment:
+      - PWNLIB_NOTERM=1
+    working_dir: "/workspace"
